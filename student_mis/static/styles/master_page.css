@@ -1,0 +1,61 @@
+body {
+    width: 100%;
+    background-color: aliceblue;
+    margin: 5px;
+}
+.interface {
+    display: flex;
+    width: 100%;
+    background-color: rgb(224, 222, 219);
+    
+}
+.image {
+    width: 350px;
+    height: 100%;
+    background-color: rgb(6, 6, 70);
+}
+.logo {
+    display: flex;
+    justify-content: center;
+    width: 80px;
+    height: 80px;
+    padding-top: 20px;
+    padding-left: 35%;
+}
+.login {
+    margin-left: 50px;
+}
+.text {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(48, 32, 66);
+    text-align: center;
+}
+p {
+    width: 200;
+    font-size: 20px;
+}
+
+#logout {
+    display: block;
+    width: 200px;
+    height: 2em;
+    font-size: 1.2rem;
+    background-color: rgb(6, 6, 70);
+    border-radius: 50px;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.menu {
+    width: 100%;
+    height: 100vh;
+    padding-top: 50px;
+}
+a {
+    display: block;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+    color: white;
+    padding: 10px;
+}
