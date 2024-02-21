@@ -9,10 +9,14 @@ body {
     background-color: rgb(224, 222, 219);
     
 }
-.image {
+.left {
     width: 350px;
     height: 100%;
     background-color: rgb(6, 6, 70);
+}
+.right {
+    
+    padding-left: 50px;
 }
 .logo {
     display: flex;
@@ -22,29 +26,16 @@ body {
     padding-top: 20px;
     padding-left: 35%;
 }
-.login {
-    margin-left: 50px;
-}
+
 .text {
+    margin-left: 50px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: rgb(48, 32, 66);
-    text-align: center;
+    padding-left: 50px;
 }
 p {
     width: 200;
     font-size: 20px;
-}
-
-#logout {
-    display: block;
-    width: 200px;
-    height: 2em;
-    font-size: 1.2rem;
-    background-color: rgb(6, 6, 70);
-    border-radius: 50px;
-    color: white;
-    border: none;
-    cursor: pointer;
 }
 
 .menu {
@@ -52,10 +43,22 @@ p {
     height: 100vh;
     padding-top: 50px;
 }
-a {
+.menu ul {
+    list-style: none;
     display: block;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 20px;
+}
+
+.menu ul li {
+    padding: 10px 20px;
+    position: relative;
+}
+.menu ul li a {
     color: white;
-    padding: 10px;
+    text-decoration: none;
+    font-size: 20px;
+    transition: all 0.1s;
+}
+
+.menu ul li a:hover {
+    color: rgb(109, 106, 106);
 }

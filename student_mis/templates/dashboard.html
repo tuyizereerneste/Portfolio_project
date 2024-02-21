@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Head master home page</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='/styles/master_page.css') }}">
+  </head>
+  <body>
+    <div class="interface">
+        <div class="left">
+            <img class="logo" src="{{ url_for('static', filename='/images/logo.JPG') }}">
+            <div class="menu">
+                <ul>
+                <li><a>Student Management</a>
+                    <div class="dropdown">
+                  <ul>
+                    <li><a href="{{ url_for('search_form') }}">Student Information</a></li>
+                    <li><a href="{{ url_for('student_form') }}">Register new student</a></li>
+                  </ul>
+                    </div>
+                </li>
+                <li><a>User Management</a>
+                  <ul>
+                    <li><a href="">User Information</a></li>
+                    <li><a href="{{ url_for('sign_up') }}">Create new user</a></li>
+                  </ul>
+                </li>
+                <li><a href="#">Transcript Management</a></li>
+                <li><a href="{{ url_for('logout') }}">Log out</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="right" >
+            <h1 class="text">Student MIS</h1>
+            <p class="text">Welcome Back! You have logged in successfully.</p>
+        </div>
+    </div>
+</body>
+</html>

@@ -3,40 +3,39 @@
   <head>
     <meta charset="UTF-8">
     <title>Registration Form</title>
-    <link rel="stylesheet" href="../static/styles/student_form.css" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='/styles/student_form.css') }}" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   </head>
   <body>
     <h1>User Registration Form</h1>
     <p>Please fill out this form with the required information</p>
-    <form method="post" action='https://register-demo.freecodecamp.org'>
+    <form method="post" action="{{ url_for('process_form') }}">
       <fieldset>
         <legend><h2>User information</h2></legend>
-        <label for="first-name">Enter User First Name: <input id="first-name" name="first-name" type="text" required /></label>
-        <label for="last-name">Enter User Last Name: <input id="last-name" name="last-name" type="text" required /></label>
+        <label for="firstname">Enter User First Name: <input id="firstname" name="firstname" type="text" required /></label>
+        <label for="lastname">Enter User Last Name: <input id="lastname" name="lastname" type="text" required /></label>
         <label for="email">Enter User Email: <input id="email" name="email" type="email" required /></label>
-        <label for="new-password">Create a Password: <input id="new-password" name="new-password" type="password" pattern="[a-z0-5]{8,}" required /></label>
-        <label for="role">Enter User Role: <input id="role" name="role" type="text" required /></label>
-        <label for="address">Address: <input id="address" name="address" type="address" type="text" required /></label>
+        <label for="password">Create a Password: <input id="password" name="password" type="password"  required /></label>
+        <label for="address">Address: <input id="address" name="address" type="text" /></label>
         <label for="telephone">Telephone Number: <input type="tel" id="telephone" name="telephone" pattern="[0-9]{10}" placeholder="0788000000" maxlength="10" required></label>
       </fieldset>
       <fieldset>
         <legend><h2>Gender</h2></legend>
-        <label for="personal-account"><input id="personal-account" type="radio" name="account-type" class="inline" checked /> Male</label>
-        <label for="business-account"><input id="business-account" type="radio" name="account-type" class="inline" /> Female</label>
+        <label for="personal-account"><input id="personal-account" type="radio" name="gender" value="Male" class="inline" /> Male</label>
+        <label for="business-account"><input id="business-account" type="radio" name="gender" value="Female" class="inline" /> Female</label>
       </fieldset>
       <fieldset>
         <legend><h2>User's Role</h2></legend>
         <label for="role">Select User's Role?
           <select id="role" name="role">
             <option value="">(select one)</option>
-            <option value="1">Head Master</option>
-            <option value="2">Head Teacher</option>
-            <option value="3">Teacher</option>
+            <option value="headmaster">Head Master</option>
+            <option value="headteacher">Head Teacher</option>
+            <option value="teacher">Teacher</option>
           </select>
         </label>
       </fieldset>
-      <button id="user-button" type="submit" value="Submit">Sign up</button>
+      <button id="user-button" name="user-button" type="submit" value="Submit">Sign up</button>
     </form>
   </body>
 </html>

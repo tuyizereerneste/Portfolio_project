@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="{{ url_for('static', filename='/styles/student_details.css') }}" />
+    <title>Search page</title>
+    </head>
+    <body>
+        <div class="container">
+            <h1>Student Information</h1>
+            <form>
+                <div class="form-group">
+                    <label for="firstname">First Name:</label>
+                    <span id="firstname">{{ student.firstname }}</span>
+                </div>
+                <div class="form-group">
+                    <label for="lastname">Last Name:</label>
+                    <span id="firstname">{{ student.lastname }}</span>
+                </div>
+                <div class="form-group">
+                    <label for="firstname">Student Email:</label>
+                    <span id="email">{{ student.email }}</span>
+                </div>
+                <div class="form-group">
+                    <label for="address">Address:</label>
+                    <span id="address">{{ student.address }}</span>
+                </div>
+                <div class="form-group">
+                    <label for="gender">Gender:</label>
+                    <span id="gender">{{ student.gender }}</span>
+                </div>
+                <div class="form-group">
+                    <label for="classroom">Class:</label>
+                    <span id="classroom">{{ student.classroom }}</span>
+                </div>
+                <div class="form-group">
+                    <label for="father_name">Father Name:</label>
+                    <span id="father_name">{{ student.father_name }}</span>
+                </div>
+                <div class="form-group">
+                    <label for="father_email">Father Email:</label>
+                    <span id="father_email">{{ student.father_email }}</span>
+                </div>
+                <div class="form-group">
+                    <label for="father_telephone">Father Telephone:</label>
+                    <span id="father_telephone">{{ student.father_telephone }}</span>
+                </div>
+                <div class="form-group">
+                    <label for="father_address">Father Address:</label>
+                    <span id="father_address">{{ student.father_address }}</span>
+                </div>
+                <div class="form-group">
+                    <label for="firstname">Mother Name:</label>
+                    <span id="mother-name">{{ student.mother_name }}</span>
+                </div>
+                <div class="form-group">
+                    <label for="mother-email">Mother Email:</label>
+                    <span id="mother-email">{{ student.mother_email }}</span>
+                </div>
+                <div class="form-group">
+                    <label for="mother_telephone">Mother Telephone:</label>
+                    <span id="mother_telephone">{{ student.mother_telephone }}</span>
+                </div>
+                <div class="form-group">
+                    <label for="mother_address">Mother Address:</label>
+                    <span id="mother_address">{{ student.mother_address }}</span>
+                </div>
+                <div class="form-group">
+                    <label for="comment">Comments:</label>
+                    <span id="comment">{{ student.comment }}</span>
+                </div>
+                </div>
+                <div class="form-group">
+                    <button type="button" onclick="editStudent()">Edit</button>
+                    <button type="submit">Save</button>
+                </div>
+            </form>
+        </div>
+    </body>
+</html>
