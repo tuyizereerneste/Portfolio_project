@@ -5,7 +5,7 @@ from werkzeug.security import generate_password_hash, check_password_hash
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'student_mis_key'
-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://root:Dollars10@localhost/student_mis'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://*******:******@localhost/student_mis'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 bcrypt = Bcrypt(app)
