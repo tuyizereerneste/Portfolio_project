@@ -52,3 +52,6 @@ button {
     min-width: 300px;
     cursor: pointer;
 }
+button:hover {
+  background-color: blue;
+}

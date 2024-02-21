@@ -1,11 +1,11 @@
-from flask import Flask, render_template, request, redirect, url_for, session, make_response
+from flask import Flask, render_template, request, redirect, url_for, session, make_response, flash
 from flask_sqlalchemy import SQLAlchemy
 from flask_bcrypt import Bcrypt
 from werkzeug.security import generate_password_hash, check_password_hash
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'student_mis_key'
-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://*****:******@localhost/student_mis'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://@localhost/student_mis'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 bcrypt = Bcrypt(app)
@@ -134,7 +134,7 @@ def process_student():
                           comment=comment)
     db.session.add(new_student)
     db.session.commit()
-    return redirect(url_for('dashboard'))
+    return redirect(url_for('search_form'))
 
 
 @app.route('/search_form')
